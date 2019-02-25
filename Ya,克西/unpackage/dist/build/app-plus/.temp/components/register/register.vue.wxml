@@ -1,0 +1,30 @@
+<template name="54286581">
+  <view class="_view data-v-62c27498 index">
+    <view class="_view data-v-62c27498 status_bar">
+      <view class="_view data-v-62c27498 top_view"></view>
+    </view>
+    <view class="_view data-v-62c27498 content">
+      <image src="{{srcImg}}" class="_image data-v-62c27498 srcImg"></image>
+      <image src="{{fhImg}}" class="_image data-v-62c27498 fhImg" bindtap="handleProxy" data-eventid="{{'VkR-0'}}" data-comkey="{{$k}}"></image>
+      <view class="_view data-v-62c27498">
+        <view class="_view data-v-62c27498 zhanghao">
+          <image src="../../static/people.png" class="_image data-v-62c27498 zhImg"></image>
+          <input type="text" class="_input data-v-62c27498 zhText" placeholder="请输入手机号" value="{{zhText}}" bindinput="handleProxy" data-eventid="{{'Xz2-1'}}" data-comkey="{{$k}}" />
+        </view>
+        <view class="_view data-v-62c27498 password">
+          <image src="../../static/pwd.png" class="_image data-v-62c27498 zhImg"></image>
+          <input type="password" class="_input data-v-62c27498 zhText" placeholder="请输入密码" value="{{pwd}}" bindinput="handleProxy" bindfocus="handleProxy" bindblur="handleProxy" data-eventid="{{'ZcT-2'}}" data-comkey="{{$k}}" />
+        </view>
+        <button class="_button data-v-62c27498 btn {{[!isDisabled ? 'btn1' : '']}}" disabled="{{isDisabled}}" bindtap="handleProxy" data-eventid="{{'m08-3'}}" data-comkey="{{$k}}">登陆</button>
+      </view>
+      <view class="_view data-v-62c27498 reg">
+        <text class="_text data-v-62c27498 regText" bindtap="handleProxy" data-eventid="{{'1x3-4'}}" data-comkey="{{$k}}">还没有账号？立即注册</text>
+        <image src="{{jiantou}}" class="_image data-v-62c27498"></image>
+      </view>
+      <view class="_view data-v-62c27498 otherReg">
+        <text class="_text data-v-62c27498 otherRegText">其他登陆方式</text>
+        <image src="{{QQRegImg}}" class="_image data-v-62c27498 QQRegImg" bindtap="handleProxy" data-eventid="{{'aFV-5'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </view>
+  </view>
+</template>

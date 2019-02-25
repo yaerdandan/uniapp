@@ -1,0 +1,46 @@
+
+page {
+  height: 100%;
+  background: #FFFBFF;
+}
+.name-view,
+.school-view,
+.canyu-view,
+.duiwu-view {
+  padding: 50rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  border-bottom: solid 3rpx #f8f8f8;
+  font-size: 35rpx;
+}
+.baoming-btn {
+  background-color: #11D4FE;
+  margin: 0 auto;
+  margin-top: 80rpx;
+  margin-bottom: 80rpx;
+  font-size: 34rpx;
+  text-align: center;
+  height: 90rpx;
+  width: 500rpx;
+  border-radius: 30px;
+  line-height: 90rpx;
+  color: #fff;
+}
+.bottom-s {
+  text-align: center;
+  background-color: #EFEFF7;
+  height: 20rpx;
+}
+.xia {
+  font-size: 32rpx;
+  color: #979597;
+  padding-bottom: 30rpx;
+  padding-left: 30rpx;
+}
+.qiupai:before {
+  content: '\89C4\5219\FF1A';
+}

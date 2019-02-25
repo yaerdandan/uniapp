@@ -1,0 +1,57 @@
+<import src="/components/uni-popup.vue.wxml" />
+<template name="5ff0a081">
+  <view class="_view data-v-a8b0c32a box">
+    <view class="_view data-v-a8b0c32a status_bar">
+      <view class="_view data-v-a8b0c32a top_view"></view>
+    </view>
+    <view class="_view data-v-a8b0c32a {{[!isLogin ? 'user1' : '']}}">
+      <template type="middle" bindhidePopup="handleProxy" data-eventid="{{'sCY-2'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'cCB-0'],$root, $slotdefault:'data-v-a8b0c32a-default-cCB-0'}}" is="a6582a58"></template>
+      <view class="_view data-v-a8b0c32a PopupBox" bindtap="handleProxy" data-eventid="{{'37y-3'}}" data-comkey="{{$k}}"></view>
+      <view class="_view data-v-a8b0c32a bg_img">
+        <image src="{{b =='' ? userBgImg : b}}" class="_image data-v-a8b0c32a bgSrc" mode="scaleToFill"></image>
+      </view>
+      <view class="_view data-v-a8b0c32a user">
+        <view class="_view data-v-a8b0c32a userInfo">
+          <image src="{{a == '' ? src: a}}" class="_image data-v-a8b0c32a userImg" bindtap="handleProxy" data-eventid="{{'ZuB-4'}}" data-comkey="{{$k}}"></image>
+          <view class="_view data-v-a8b0c32a userNameBox">
+            <label class="_span data-v-a8b0c32a username">{{username}}</label>
+          </view>
+          <text class="_text data-v-a8b0c32a ID">ID {{userID}}</text>
+          <input class="_input data-v-a8b0c32a sig" value="这是一个个性签名" />
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-a8b0c32a {{[isLogin ? 'loginText1' : '']}}">
+      <view class="_view data-v-a8b0c32a bg_img">
+        <image src="{{src1}}" class="_image data-v-a8b0c32a bgSrc" mode="scaleToFill"></image>
+      </view>
+      <view class="_view data-v-a8b0c32a loginText">
+        <image src="{{userImg}}" class="_image data-v-a8b0c32a loginTextImg"></image>
+        <text bindtap="handleProxy" data-eventid="{{'bTV-5'}}" data-comkey="{{$k}}" class="_text data-v-a8b0c32a">登录/</text>
+        <text bindtap="handleProxy" data-eventid="{{'jQQ-6'}}" data-comkey="{{$k}}" class="_text data-v-a8b0c32a">注册</text>
+      </view>
+    </view>
+    <view class="_view data-v-a8b0c32a function">
+      <view bindtap="handleProxy" data-eventid="{{'EJ2-7'}}" data-comkey="{{$k}}" class="_li data-v-a8b0c32a">
+        <image class="_image data-v-a8b0c32a iconImg" src="../../../static/Mytiezi.png"></image>
+        <label class="_span data-v-a8b0c32a functionText">我的帖子</label>
+        <image class="_image data-v-a8b0c32a arrows" src="../../../static/MytieziImg.png"></image>
+      </view>
+      <view bindtap="handleProxy" data-eventid="{{'2YC-8'}}" data-comkey="{{$k}}" class="_li data-v-a8b0c32a">
+        <image class="_image data-v-a8b0c32a iconImg" src="../../../static/Peoplestar.png"></image>
+        <label class="_span data-v-a8b0c32a functionText">我的收藏</label>
+        <image class="_image data-v-a8b0c32a arrows" src="../../../static/PeoplestarImg.png"></image>
+      </view>
+      <view bindtap="handleProxy" data-eventid="{{'5OK-9'}}" data-comkey="{{$k}}" class="_li data-v-a8b0c32a">
+        <image class="_image data-v-a8b0c32a iconImg" src="../../../static/question.png"></image>
+        <label class="_span data-v-a8b0c32a functionText">问题反馈</label>
+        <image class="_image data-v-a8b0c32a arrows" src="../../../static/questionImg.png"></image>
+      </view>
+      <view bindtap="handleProxy" data-eventid="{{'cOJ-10'}}" data-comkey="{{$k}}" class="_li data-v-a8b0c32a">
+        <image class="_image data-v-a8b0c32a iconImg" src="../../../static/set.png"></image>
+        <label class="_span data-v-a8b0c32a functionText">设置</label>
+        <image class="_image data-v-a8b0c32a arrows" src="../../../static/setImg.png"></image>
+      </view>
+    </view>
+  </view>
+</template>

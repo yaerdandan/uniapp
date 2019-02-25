@@ -1,0 +1,24 @@
+<template name="222563a1">
+  <view class="_view data-v-25d0c26a">
+    <view class="_view data-v-25d0c26a status_bar">
+      <view class="_view data-v-25d0c26a top_view"></view>
+    </view>
+    <view class="_view data-v-25d0c26a title">
+      <text class="_text data-v-25d0c26a">聊天</text>
+    </view>
+    <view hidden="{{!(!isShow)}}" class="_view data-v-25d0c26a notLog">
+      <text class="_text data-v-25d0c26a">您还没有登陆~~~</text>
+    </view>
+    <view hidden="{{!(!isGroup)}}" class="_view data-v-25d0c26a">
+      <text class="_text data-v-25d0c26a">您还没有群聊哦~~~</text>
+    </view>
+    <view class="_view data-v-25d0c26a Box" hidden="{{!(isShow)}}">
+      <view class="_view data-v-25d0c26a chatbox" wx:key="index" key="{{index}}" wx:for="{{todos}}" wx:for-index="index" wx:for-item="todo">
+        <view bindtap="handleProxy" data-eventid="{{'SKm-0-'+index}}" data-comkey="{{$k}}" class="_view data-v-25d0c26a">
+          <image src="{{todos[index]['0'].home_img}}" class="_image data-v-25d0c26a userChatImg"></image>
+          <text class="_text data-v-25d0c26a userChatName">{{todos[index]['0'].home_name}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

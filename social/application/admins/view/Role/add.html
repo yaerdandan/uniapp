@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>角色添加修改</title>
+    <link rel="stylesheet"  href="../static/puls/layui/css/layui.css">
+    <script type="text/javascript" src="../../../../static/puls/layui/layui.js"></script>
+</head>
+<body style="padding: 10px">
+<form class="layui-form">
+    <div class="layui-form-item">
+        <label class="layui-form-label">名称</label>
+        <div class="layui-input-block">
+            <input type="hidden" id="gid" name="gid" value="{:isset($gid[0]['title'])?$gid[0]['title']:'0'}">
+            <input type="text" class="layui-input" placeholder="请输入名称" id="title" name="title" value="{:isset($gid[0]['title'])?$gid[0]['title']:''}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">权限管理</label>
+        <div class="layui-input-block">
+            <input type="checkbox"  name="rights[1]" title="你猜" >
+            <input type="checkbox"  name="rights[2]" title="你猜" >
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">&nbsp</label>
+        <button class="layui-btn " onclick="save();return false;">保存</button>
+    </div>
+</form>
+<script type="text/javascript">
+    layui.use(['layer','form'],function () {
+        layer=layui.layer;
+        $=layui.jquery;
+        form=layer.form;
+    });
+//    添加修改数据
+    function save() {
+        var gid=$('#gid').val();
+        var title=$('#title').val();
+        if(gid==0){
+            if(title==''){
+                layer.msg('请输入名称',{'icon':2,'amin':2});
+                return false;
+            }
+        }
+        $.post('/index.php/admins/Role/save',$('form').serialize(),function (res) {
+
+        },'json')
+    }
+
+</script>
+</body>
+</html>

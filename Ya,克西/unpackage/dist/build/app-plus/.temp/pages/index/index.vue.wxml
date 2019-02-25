@@ -1,0 +1,70 @@
+<template name="2f295c35">
+  <view class="_view data-v-a9ef3790 content">
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" circular="true" interval="{{3000}}" duration="{{1000}}" class="_swiper data-v-a9ef3790">
+      <swiper-item class="_swiper-item data-v-a9ef3790">
+        <view class="_view data-v-a9ef3790 swiper-item">1</view>
+      </swiper-item>
+      <swiper-item class="_swiper-item data-v-a9ef3790">
+        <view class="_view data-v-a9ef3790 swiper-item">2</view>
+      </swiper-item>
+      <swiper-item class="_swiper-item data-v-a9ef3790">
+        <view class="_view data-v-a9ef3790 swiper-item">3</view>
+      </swiper-item>
+    </swiper>
+    <view class="_view data-v-a9ef3790 box">
+      <view class="_ul data-v-a9ef3790">
+        <view class="_li data-v-a9ef3790 function" wx:key="index" key="{{index}}" wx:for="{{todos}}" wx:for-index="index" wx:for-item="todo">
+          <image class="_image data-v-a9ef3790 iconImg" src="{{todo.img}}"></image>
+          <label class="_span data-v-a9ef3790 text">{{todo.text}}</label>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-a9ef3790 particularlyRecommend">
+      <view class="_view data-v-a9ef3790">
+        <view class="_div data-v-a9ef3790">
+          <image src="{{recommendSrc}}" class="_image data-v-a9ef3790 recommendSrc"></image>
+          <label class="_span data-v-a9ef3790 recommendText">特别推荐</label>
+          <label class="_span data-v-a9ef3790 recommendEnglish">Recommend</label>
+          <image src="{{mote}}" class="_image data-v-a9ef3790 mote"></image>
+          <label class="_span data-v-a9ef3790 moteText">·mote·</label>
+        </view>
+      </view>
+      <view class="_view data-v-a9ef3790 recommendContent">
+        <view class="_ul data-v-a9ef3790">
+          <view wx:key="index" key="{{index}}" wx:for="{{recommends}}" wx:for-index="index" wx:for-item="todo" class="_li data-v-a9ef3790">
+            <image src="{{todo.recommendBar}}" class="_image data-v-a9ef3790 recommendBar"></image>
+            <view class="_view data-v-a9ef3790 recBarLeft">
+              <image class="_image data-v-a9ef3790 recBarLeftImg"></image>
+              <label class="_span data-v-a9ef3790 recBarLeftShop">{{todo.recBarLeftShop}}</label>
+            </view>
+            <view class="_view data-v-a9ef3790 recBarRight">
+              <label class="_span data-v-a9ef3790 recBarRightTitle">{{todo.recBarRightTitle}}</label>
+              <label class="_span data-v-a9ef3790 recBarRightEng">{{todo.recBarRightEng}}</label>
+              <label class="_span data-v-a9ef3790 recBarRightdsc">{{todo.recBarRightdsc}}</label>
+              <image style="width:80rpx;height:80rpx;position: absolute;left:414rpx;top:6rpx;" src="{{todo.NO1}}" class="_image data-v-a9ef3790"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-a9ef3790 guessLike">
+      <view class="_view data-v-a9ef3790">
+        <image src="{{guessLikeImg}}" class="_image data-v-a9ef3790 guessLikeImg"></image>
+        <label class="_span data-v-a9ef3790 guessLikeText">猜你喜欢</label>
+        <label class="_span data-v-a9ef3790 guessLikeEng">Guess You Like</label>
+      </view>
+      <swiper style="margin-bottom:0px;margin-top:15rpx;" indicator-dots="{{true}}" interval="{{3000}}" duration="{{1000}}" circular="true" next-margin="60px" previous-margin="60px" bindchange="handleProxy" data-eventid="{{'YlH-0'}}" data-comkey="{{$k}}"
+        class="_swiper data-v-a9ef3790">
+        <swiper-item class="_swiper-item data-v-a9ef3790">
+          <view class="_view data-v-a9ef3790 swiper-item">1</view>
+        </swiper-item>
+        <swiper-item class="_swiper-item data-v-a9ef3790">
+          <view class="_view data-v-a9ef3790 swiper-item">2</view>
+        </swiper-item>
+        <swiper-item class="_swiper-item data-v-a9ef3790">
+          <view class="_view data-v-a9ef3790 swiper-item">3</view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</template>

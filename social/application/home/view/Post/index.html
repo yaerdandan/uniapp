@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"  href="../../static/puls/layui/css/layui.css">
+    <script type="text/javascript" src="../../static/puls/layui/layui.js"></script>
+</head>
+<body>
+
+<form enctype="multipart/form-data" method="post">
+    <input type="file" name="file[]" /> <br>
+    <input type="file" name="file[]" /> <br>
+    <input type="file" name="file[]" /> <br>
+    <input type="submit" value="上传"  onclick="add();return false;"/>
+</form>
+<script type="text/javascript">
+    layui.use(['layer','form'],function () {
+        layer=layui.layer;
+        $=layui.jquery;
+        var form=layui.form;
+    });
+    function add() {
+        $.post(' http://10.2.48.63/social/public/home/Post/add',$('form').serialize(),function (res) {
+            layer.alert(res)
+        })
+    }
+
+</script>
+</body>
+</html>

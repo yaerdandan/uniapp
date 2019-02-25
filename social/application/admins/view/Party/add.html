@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加用户</title>
+    <link rel="stylesheet"  href="../static/puls/layui/css/layui.css">
+    <script type="text/javascript" src="../static/puls/layui/css/layui.css"></script>
+</head>
+<body style="padding: 10px">
+<form class="layui-form">
+    <div class="layui-form-item">
+        <label class="layui-form-label">用户名:</label>
+        <div class="layui-input-block">
+            <input type="text" name="user" class="layui-input" placeholder="请输入用户名" value="{:isset($data.list.user)?$data.list.user:''}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">角色:</label>
+   <div class="layui-input-inline">
+       <select  name="gid" lay-verify="">
+           <option value="0">--请选择--</option>
+           {volist name="$data.gid" id="vo"}
+           <option value="{$vo.gid}" {if $data.list.gid==$vo.gid}selected{/if}>{$vo.title}</option>
+           {/volist}
+       </select>
+   </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">密码:</label>
+        <div class="layui-input-inline">
+            <input type="password" class="layui-input" name="paw" placeholder="{$data.list.id>0?'请输入新密码':'请输入密码'}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">&nbsp</label>
+        <div class="layui-input-inline">
+            <input type="checkbox" title="禁用" value="1" name="zt" {if $data.list.zt==1}checked{/if}>
+        </div>
+    </div>
+    <input type="hidden" value="{:isset($data.list.id)?$data.list.id:'0'}" name="id">
+</form>
+<div class="layui-form-item">
+    <label class="layui-form-label"></label>
+    <div class="layui-input-block">
+        <button class="layui-btn" onclick="save()">保存</button>
+    </div>
+</div>
+<script type="text/javascript">
+    layui.use(['layer','form'],function () {
+        var form=layui.form;
+        layer=layui.layer;
+        $=layui.jquery;
+    });
+//    添加修改
+    function save() {
+        var user=$("input[name='user']").val();
+        var gid=$("input[name='gid']").val();
+        var paw=$("input[name='paw']").val();
+        var id=$("input[name='id']").val();
+        if(user==''){
+            layer.msg('请输入用户名',{'icon':2,'amin':6});
+            return;
+        }
+        if(gid==0){
+            layer.msg('请选择角色',{'icon':2,'amin':6});
+            return;
+        }
+        if(id==0&&paw==''){
+            layer.msg('密码不能为空',{'icon':2,'amin':6});
+            return;
+        }
+        $.post('/admins/Party/save',$('form').serialize(),function (res) {
+            if(res.con>0){
+                layer.msg(res.msg,{'icon':2,'amin':2});
+            }else{
+                layer.msg(res.msg);
+                setTimeout(function () {
+                    parent.window.location.reload();
+                },1000)
+            }
+        },'json')
+    }
+</script>
+</body>
+</html>

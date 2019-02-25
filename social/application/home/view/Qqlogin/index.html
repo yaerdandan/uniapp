@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"  href="../../static/puls/layui/css/layui.css">
+    <script type="text/javascript" src="../../static/puls/layui/layui.js"></script>
+
+</head>
+<body>
+<form class="layui-form ">
+    <div class="layui-form-item">
+        <label class="layui-form-label">用户名：</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" placeholder="请输入用户名" name="user" >
+        </div>
+    </div>
+
+        <label class="layui-form-label">密码：</label>
+        <div class="layui-input-block">
+            <input type="password" class="layui-input" placeholder="请输入密码" name="paw">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">图片：</label>
+        <div class="layui-input-block">
+            <input type="text" placeholder="确认密码" class="layui-input" name="picture">
+        </div>
+    </div>
+</form>
+<div class="layui-form-item">
+    <div class="layui-input-block">
+        <button class="layui-btn " onclick="add();return false;">添加</button>
+    </div>
+</div>
+<div class="layui-form-item">
+    <label class="layui-form-label">&nbsp</label>
+    <div class="layui-input-inline">
+        <button class="layui-btn layui-btn-sm"   id="upload_img">  <i class="layui-icon">&#xe67c;</i>上传图片</button>
+        <img  id="pre_img" src="{:isset($data['list']['img'])?$data['list']['img']:''}" style="height: 80px" >
+        <input type="hidden" name="img" value="{:isset($data.list.img)?$data.list.img:''}" >
+    </div>
+</div>
+<script type="text/javascript">
+    layui.use(['layer','form','upload'],function () {
+        var form = layui.form;
+        $ = layui.jquery;
+        layer = layui.layer;
+        var upload = layui.upload;
+
+        //图片上传
+        var uploadInst = upload.render({
+            elem: '#upload_img' //绑定元素
+            ,url: ' http://10.2.48.63/social/public/home/Post/add' //上传接口
+            ,accept:'images'
+            ,done: function(res){
+                //上传完毕回调
+                $('#pre_img').attr('src',res.msg);
+                $('input[name="img"]').val(res.msg);
+            }
+            ,error: function(){
+                //请求异常回调
+            }
+        });
+    });
+    //添加
+    function add() {
+        var user=$("input[name='user']").val();
+        var paw=$("input[name='paw']").val();
+        var picture=$("input[name='picture']").val();
+        $.post('http://10.2.48.63/social/public/home/Qqlogin/add',{"user":user,"paw":paw,"picture":picture},function (res) {
+            console.log(res.con);
+            if(res.con>0){
+                layer.msg(res.msg,{'icon':2,'amin':2});
+            }else {
+                layer.msg(res.msg);
+                setTimeout(function () {
+                    window.location.reload();
+                },1000)
+            }
+        },'json')
+    }
+    //删除
+    function del(id) {
+        $.post('http://10.2.48.63/social/public/home/Userlogin/delete',{"id":id},function (res) {
+            if(res.con>0){
+                layer.msg(res.msg,{'icon':2,'amin':2})
+            }else {
+                layer.msg(res.msg);
+                setTimeout(function () {
+                    window.location.reload();
+                })
+            }
+        })
+    }
+    //修改
+    function update(id) {
+        var user=$("#user").val();
+        var iphone=$("#iphone").val();
+        var paw=$("#paw").val();
+        var old_paw=$("#old_paw").val();
+        console.log(user);
+        $.post('http://10.2.48.63/social/public/home/Userlogin/update',{'id':id,"user":user,"iphone":iphone,"paw":paw,"old_paw":old_paw},function (res) {
+            if(res.con>0){
+                layer.msg(res.msg,{'icon':2,'amin':2})
+            }else {
+                layer.msg(res.msg);
+                setTimeout(function () {
+                    window.location.reload();
+                })
+            }
+        })
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<template name="44d366f6">
+  <view class="_view data-v-c46643cc">
+    <view class="_view data-v-c46643cc status_bar">
+      <view class="_view data-v-c46643cc top_view"></view>
+    </view>
+    <view class="_view data-v-c46643cc content1">
+      <image src="{{fhImg}}" class="_image data-v-c46643cc fhImg" bindtap="handleProxy" data-eventid="{{'BYk-0'}}" data-comkey="{{$k}}"></image>
+      <text class="_text data-v-c46643cc regText">帖子详情</text>
+    </view>
+    <view class="_view data-v-c46643cc topic">
+      <view class="_view data-v-c46643cc topicContent" wx:key="index" key="{{index}}" wx:for="{{lists}}" wx:for-index="index" wx:for-item="todo">
+        <view class="_view data-v-c46643cc topicUser">
+          <image src="{{todo.userPhotoImg}}" class="_image data-v-c46643cc topicUserImg"></image>
+          <text class="_text data-v-c46643cc topicUsername">{{todo.username}}</text>
+          <text class="_text data-v-c46643cc Time">{{todo.add_time}}</text>
+          <image src="{{topicTimeImg}}" class="_image data-v-c46643cc topicTimeImg"></image>
+        </view>
+        <view class="_view data-v-c46643cc topicTextbox">
+          <text class="_text data-v-c46643cc topicTitle1">{{todo.title}}</text>
+          <text class="_text data-v-c46643cc topicTextContent">{{todo.content}}</text>
+          <view class="_view data-v-c46643cc topicContentImgBox">
+            <view class="_view data-v-c46643cc topicContentImg" wx:key="index1" key="{{index1}}" wx:for="{{todo.src}}" wx:for-index="index1" wx:for-item="todoImg">
+              <image src="{{todoImg}}" class="_image data-v-c46643cc topicContentImg_1" bindtap="handleProxy" data-eventid="{{'6VG-1-'+index+'-'+index1}}" data-comkey="{{$k}}"></image>
+            </view>
+          </view>
+          <view class="_view data-v-c46643cc result">
+            <view class="_view data-v-c46643cc resultStar">
+              <image src="{{todo.data_coll == 1 ? resultStarImg1 : resultStarImg}}" class="_image data-v-c46643cc resultStarImg" bindtap="handleProxy" data-eventid="{{'kgU-2-'+index}}" data-comkey="{{$k}}"></image>
+              <text class="_text data-v-c46643cc resultStarText {{[(todo.data_coll == 1 ? true : false) ? 'resultStarText1' : '']}}">{{todo.date_coll_count}}</text>
+            </view>
+            <view class="_view data-v-c46643cc resultStar">
+              <image src="{{resultCommentImg}}" class="_image data-v-c46643cc resultStarImg"></image>
+              <text class="_text data-v-c46643cc resultStarComment">{{todo.resultStarComment}}</text>
+            </view>
+            <view class="_view data-v-c46643cc resultStar_1">
+              <image src="{{todo.date_praise_up == 1 ? resultTrampleImg1: resultTrampleImg}}" class="_image data-v-c46643cc resultTrampleImg" bindtap="handleProxy" data-eventid="{{'6ik-3-'+index}}" data-comkey="{{$k}}"></image>
+              <text class="_text data-v-c46643cc resultTrampText {{[(todo.top == 1 ? true : false) ? 'resultTrampText1' : '']}}">{{todo.date_count}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view style="margin-bottom:130rpx;" class="_view data-v-c46643cc">
+        <view class="_view data-v-c46643cc comment" wx:key="index" key="{{index}}" wx:for="{{detailTopicPL}}" wx:for-index="index" wx:for-item="todo">
+          <image src="{{todo.userImg}}" class="_image data-v-c46643cc commentImg"></image>
+          <text class="_text data-v-c46643cc commentName">{{todo.username}}</text>
+          <text class="_text data-v-c46643cc commentContent">{{todo.content}}</text>
+          <text class="_text data-v-c46643cc commentTime">{{todo.add_time}}</text>
+        </view>
+      </view>
+      <view class="_view data-v-c46643cc content">
+        <text class="_text data-v-c46643cc text">回复:</text>
+        <textarea value="{{text}}" bindinput="handleProxy" data-eventid="{{'ZPe-4'}}" data-comkey="{{$k}}" class="_textarea data-v-c46643cc" />
+        <button bindtap="handleProxy" id="click" data-eventid="{{'dt1-5'}}" data-comkey="{{$k}}" class="_button data-v-c46643cc">
+          <image src="{{btnImg}}" class="_image data-v-c46643cc btnImg"></image>
+        </button>
+      </view>
+    </view>
+  </view>
+</template>

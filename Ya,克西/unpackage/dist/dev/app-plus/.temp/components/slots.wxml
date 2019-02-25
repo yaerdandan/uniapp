@@ -1,0 +1,5 @@
+<import src="/components/uni-popup.vue.wxml" />
+<template name="data-v-a8b0c32a-default-cCB-0">
+  <text class="_text data-v-a8b0c32a updateImg" bindtap="handleProxy" data-eventid="{{'Whh-0'}}" data-comkey="{{$k}}">更换封面</text>
+  <text class="_text data-v-a8b0c32a quxiaoClick" bindtap="handleProxy" data-eventid="{{'EbN-1'}}" data-comkey="{{$k}}">取消</text>
+</template>

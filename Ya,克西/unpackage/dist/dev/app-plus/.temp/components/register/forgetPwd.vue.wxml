@@ -1,0 +1,27 @@
+<template name="65b0cba2">
+  <view class="_view data-v-2a589f6b index">
+    <view class="_view data-v-2a589f6b status_bar">
+      <view class="_view data-v-2a589f6b top_view"></view>
+    </view>
+    <view class="_view data-v-2a589f6b content">
+      <image src="{{fhImg}}" class="_image data-v-2a589f6b fhImg" bindtap="handleProxy" data-eventid="{{'iy0-0'}}" data-comkey="{{$k}}"></image>
+      <text class="_text data-v-2a589f6b regText">注册</text>
+    </view>
+    <view class="_view data-v-2a589f6b phone">
+      <text class="_text data-v-2a589f6b number">+86</text>
+      <input type="text" class="_input data-v-2a589f6b phoneText" placeholder="请输入手机号" value="{{phone}}" bindinput="handleProxy" data-eventid="{{'gLd-1'}}" data-comkey="{{$k}}" />
+    </view>
+    <view class="_view data-v-2a589f6b phone verify">
+      <input type="text" class="_input data-v-2a589f6b phoneVerify" placeholder="请输入验证码" value="{{verify}}" bindinput="handleProxy" data-eventid="{{'sUH-2'}}" data-comkey="{{$k}}" />
+      <button class="_button data-v-2a589f6b btn" bindtap="handleProxy" disabled="{{disabled}}" data-eventid="{{'76p-3'}}" data-comkey="{{$k}}">{{yzm}}</button>
+    </view>
+    <view class="_view data-v-2a589f6b password">
+      <text class="_text data-v-2a589f6b nicknameText">设置密码</text>
+      <input type="text" placeholder="请输入6-20位密码" class="_input data-v-2a589f6b pwd" value="{{pwd}}" bindinput="handleProxy" bindfocus="handleProxy" data-eventid="{{'hxW-4'}}" data-comkey="{{$k}}" />
+      <input type="text" placeholder="确认密码" class="_input data-v-2a589f6b conPwd" value="{{conPwd}}" bindinput="handleProxy" bindfocus="handleProxy" data-eventid="{{'lCM-5'}}" data-comkey="{{$k}}" />
+    </view>
+    <view class="_view data-v-2a589f6b">
+      <button class="_button data-v-2a589f6b btnReg {{[!isDisabled ? 'btnReg1' : '']}}" disabled="{{isDisabled}}" bindtap="handleProxy" data-eventid="{{'ELy-6'}}" data-comkey="{{$k}}">注册</button>
+    </view>
+  </view>
+</template>

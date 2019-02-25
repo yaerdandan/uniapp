@@ -1,0 +1,31 @@
+<template name="a67926d4">
+  <view class="_view data-v-5cda7db2 index">
+    <view class="_view data-v-5cda7db2 status_bar">
+      <view class="_view data-v-5cda7db2 top_view"></view>
+    </view>
+    <view class="_view data-v-5cda7db2 content">
+      <image src="{{srcImg}}" class="_image data-v-5cda7db2 srcImg"></image>
+      <image src="{{fhImg}}" class="_image data-v-5cda7db2 fhImg" bindtap="handleProxy" data-eventid="{{'x9K-0'}}" data-comkey="{{$k}}"></image>
+      <view class="_view data-v-5cda7db2">
+        <view class="_view data-v-5cda7db2 zhanghao">
+          <image src="../../static/people.png" class="_image data-v-5cda7db2 zhImg"></image>
+          <input type="text" class="_input data-v-5cda7db2 zhText" placeholder="请输入手机号" value="{{zhText}}" bindinput="handleProxy" data-eventid="{{'frQ-1'}}" data-comkey="{{$k}}" />
+        </view>
+        <view class="_view data-v-5cda7db2 password">
+          <image src="../../static/pwd.png" class="_image data-v-5cda7db2 zhImg"></image>
+          <input type="password" class="_input data-v-5cda7db2 zhText" placeholder="请输入密码" value="{{pwd}}" bindinput="handleProxy" bindfocus="handleProxy" bindblur="handleProxy" data-eventid="{{'oBN-2'}}" data-comkey="{{$k}}" />
+        </view>
+        <button class="_button data-v-5cda7db2 btn {{[!isDisabled ? 'btn1' : '']}}" disabled="{{isDisabled}}" bindtap="handleProxy" data-eventid="{{'W63-3'}}" data-comkey="{{$k}}">登陆</button>
+      </view>
+      <view class="_view data-v-5cda7db2 reg">
+        <text class="_text data-v-5cda7db2 forgetPwd" bindtap="handleProxy" data-eventid="{{'Q4l-4'}}" data-comkey="{{$k}}">忘记密码？</text>
+        <text class="_text data-v-5cda7db2 regText" bindtap="handleProxy" data-eventid="{{'03U-5'}}" data-comkey="{{$k}}">还没有账号？立即注册</text>
+        <image src="{{jiantou}}" class="_image data-v-5cda7db2"></image>
+      </view>
+      <view class="_view data-v-5cda7db2 otherReg">
+        <text class="_text data-v-5cda7db2 otherRegText">其他登陆方式</text>
+        <image src="{{QQRegImg}}" class="_image data-v-5cda7db2 QQRegImg" bindtap="handleProxy" data-eventid="{{'iG2-6'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </view>
+  </view>
+</template>

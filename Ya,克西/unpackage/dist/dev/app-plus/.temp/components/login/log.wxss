@@ -1,0 +1,98 @@
+
+.status_bar {
+  height: var(--status-bar-height);
+  width: 100%;
+}
+.top_view {
+  height: var(--status-bar-height);
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.srcImg {
+  width: 100%;
+  height: 400rpx;
+}
+.fhImg {
+  width: 30rpx;
+  height: 60rpx;
+  position: fixed;
+  top: 80rpx;
+  left: 30rpx;
+}
+.zhanghao {
+  width: 80%;
+  height: 100rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  border-bottom: 3px solid lightgray;
+}
+.zhImg {
+  width: 60rpx;
+  height: 60rpx;
+  position: relative;
+  top: 10rpx;
+}
+.zhText {
+  margin-top: 10rpx;
+  width: 80%;
+  height: 70rpx;
+  line-height: 70rpx;
+  float: right;
+  margin-right: 30rpx;
+  left: 100rpx;
+}
+.password {
+  width: 80%;
+  height: 100rpx;
+  margin: 0 auto;
+  margin-top: 70rpx;
+  border-bottom: 3px solid lightgray;
+}
+.forgetPwd {
+  position: fixed;
+  top: 780rpx;
+  left: 525rpx;
+  color: rgb(86,202,251);
+  font-size: 35rpx;
+}
+.btn {
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 110rpx;
+  border-radius: 30rpx;
+}
+.btn1 {
+  background: #149EFF;
+  color: #ffffff;
+}
+.reg {
+  margin: 0 auto;
+  width: 58%;
+  margin-top: 60rpx;
+}
+.regText {
+  color: #23BEFA;
+  font-size: 40rpx;
+}
+.reg image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.otherReg {
+  margin-top: 100rpx;
+}
+.otherRegText {
+  text-align: center;
+  display: block;
+  color: lightgray;
+  font-size: 35rpx;
+  font-weight: 500;
+}
+.QQRegImg {
+  width: 140rpx;
+  height: 140rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}

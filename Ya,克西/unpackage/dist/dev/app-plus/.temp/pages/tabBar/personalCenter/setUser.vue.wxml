@@ -1,0 +1,31 @@
+<template name="71a5ff9e">
+  <view class="_view data-v-4c9d7587 index">
+    <view class="_view data-v-4c9d7587 status_bar">
+      <view class="_view data-v-4c9d7587 top_view"></view>
+    </view>
+    <view class="_view data-v-4c9d7587 content">
+      <image src="{{fhImg}}" class="_image data-v-4c9d7587 fhImg" bindtap="handleProxy" data-eventid="{{'jWy-0'}}" data-comkey="{{$k}}"></image>
+      <text class="_text data-v-4c9d7587 regText">设置</text>
+    </view>
+    <view class="_view data-v-4c9d7587">
+      <image src="{{userImg}}" class="_image data-v-4c9d7587 userImg"></image>
+    </view>
+    <view class="_view data-v-4c9d7587 box">
+      <text class="_text data-v-4c9d7587 zhanghao">当前账号</text>
+      <view class="_view data-v-4c9d7587 box1">
+        <input type="text" value="我是账号" class="_input data-v-4c9d7587 nicknName" />
+        <text class="_text data-v-4c9d7587 nicknNameClick">修改账号</text>
+      </view>
+      <view class="_view data-v-4c9d7587 box2">
+        <input type="text" value="18633067829" class="_input data-v-4c9d7587 number" />
+      </view>
+      <view class="_view data-v-4c9d7587 box3">
+        <text class="_text data-v-4c9d7587 pwd">密码管理</text>
+        <text class="_text data-v-4c9d7587 updatepwd" bindtap="handleProxy" data-eventid="{{'Wg3-1'}}" data-comkey="{{$k}}">修改密码</text>
+      </view>
+    </view>
+    <view class="_view data-v-4c9d7587 btnbox">
+      <button type="warn" class="_button data-v-4c9d7587 btn" bindtap="handleProxy" data-eventid="{{'K9d-2'}}" data-comkey="{{$k}}">退出当前账号</button>
+    </view>
+  </view>
+</template>

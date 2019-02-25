@@ -1,0 +1,31 @@
+<template name="54286581">
+  <view class="_view data-v-62c27498 index">
+    <view class="_view data-v-62c27498 status_bar">
+      <view class="_view data-v-62c27498 top_view"></view>
+    </view>
+    <view class="_view data-v-62c27498 content">
+      <image src="{{fhImg}}" class="_image data-v-62c27498 fhImg" bindtap="handleProxy" data-eventid="{{'NGx-0'}}" data-comkey="{{$k}}"></image>
+      <text class="_text data-v-62c27498 regText">注册</text>
+    </view>
+    <view class="_view data-v-62c27498 phone">
+      <text class="_text data-v-62c27498 number">+86</text>
+      <input type="text" class="_input data-v-62c27498 phoneText" placeholder="请输入手机号" value="{{phone}}" bindinput="handleProxy" data-eventid="{{'IGk-1'}}" data-comkey="{{$k}}" />
+    </view>
+    <view class="_view data-v-62c27498 phone verify">
+      <input type="text" class="_input data-v-62c27498 phoneVerify" placeholder="请输入验证码" value="{{verify}}" bindinput="handleProxy" data-eventid="{{'MNs-2'}}" data-comkey="{{$k}}" />
+      <button class="_button data-v-62c27498 btn" bindtap="handleProxy" disabled="{{disabled}}" data-eventid="{{'Bmc-3'}}" data-comkey="{{$k}}">{{yzm}}</button>
+    </view>
+    <view class="_view data-v-62c27498 nicknameBox">
+      <text class="_text data-v-62c27498 nicknameText">设置昵称</text>
+      <input type="text" placeholder="请输入昵称" class="_input data-v-62c27498 nickname" value="{{username}}" bindinput="handleProxy" bindfocus="handleProxy" data-eventid="{{'3qd-4'}}" data-comkey="{{$k}}" />
+    </view>
+    <view class="_view data-v-62c27498 password">
+      <text class="_text data-v-62c27498 nicknameText">设置密码</text>
+      <input type="text" placeholder="请输入6-20位密码" class="_input data-v-62c27498 pwd" value="{{pwd}}" bindinput="handleProxy" bindfocus="handleProxy" data-eventid="{{'tZo-5'}}" data-comkey="{{$k}}" />
+      <input type="text" placeholder="确认密码" class="_input data-v-62c27498 conPwd" value="{{conPwd}}" bindinput="handleProxy" bindfocus="handleProxy" data-eventid="{{'cYw-6'}}" data-comkey="{{$k}}" />
+    </view>
+    <view class="_view data-v-62c27498">
+      <button class="_button data-v-62c27498 btnReg {{[!isDisabled ? 'btnReg1' : '']}}" disabled="{{isDisabled}}" bindtap="handleProxy" data-eventid="{{'yfq-7'}}" data-comkey="{{$k}}">注册</button>
+    </view>
+  </view>
+</template>

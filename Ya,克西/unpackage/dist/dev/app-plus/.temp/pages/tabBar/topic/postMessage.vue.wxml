@@ -1,0 +1,23 @@
+<template name="7170065f">
+  <view class="_view data-v-6b2d04fa">
+    <view class="_view data-v-6b2d04fa status_bar">
+      <view class="_view data-v-6b2d04fa top_view"></view>
+    </view>
+    <view class="_view data-v-6b2d04fa navigation">
+      <view class="_view data-v-6b2d04fa navigationCancel" bindtap="handleProxy" data-eventid="{{'QlO-0'}}" data-comkey="{{$k}}">取消</view>
+      <text class="_text data-v-6b2d04fa navigationTopic">发帖子</text>
+      <button class="_button data-v-6b2d04fa navigationBtn" bindtap="handleProxy" data-eventid="{{'BgD-1'}}" data-comkey="{{$k}}">发表</button>
+    </view>
+    <view class="_view data-v-6b2d04fa invitation">
+      <input type="text" placeholder="记得加个标题" class="_input data-v-6b2d04fa invitationTitle" value="{{title}}" bindinput="handleProxy" data-eventid="{{'ilq-2'}}" data-comkey="{{$k}}" />
+      <textarea value="{{content}}" placeholder="分享一下你身边的新鲜事吧..." class="_textarea data-v-6b2d04fa invitationContent" bindinput="handleProxy" data-eventid="{{'6DI-3'}}" data-comkey="{{$k}}" />
+    </view>
+    <view class="_view data-v-6b2d04fa">
+      <view wx:key="index" key="{{index}}" wx:for="{{todoSrc}}" wx:for-index="index" wx:for-item="todo" class="_view data-v-6b2d04fa">
+        <image src="{{todo.src}}" class="_img data-v-6b2d04fa showPicture" bindtap="handleProxy" data-eventid="{{'fne-4-'+index}}" data-comkey="{{$k}}"></image>
+      </view>
+      <image src="{{src}}" class="_image data-v-6b2d04fa chooseImg" bindtap="handleProxy" data-eventid="{{'LV6-5'}}" data-comkey="{{$k}}"></image>
+    </view>
+    <text hidden="{{!(isShow)}}" class="_text data-v-6b2d04fa">请添加图片</text>
+  </view>
+</template>

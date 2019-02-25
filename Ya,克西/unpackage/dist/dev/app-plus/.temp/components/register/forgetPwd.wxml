@@ -1,0 +1,1 @@
+<import src="/components/register/forgetPwd.vue.wxml" /><template is="65b0cba2" data="{{ ...$root['0'], $root }}"/>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>
+			demo
+		</title>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				document.documentElement.style.fontSize = document.documentElement.clientWidth / 20 + 'px'
+			})
+		</script>
+		<link rel="stylesheet" href="/static/index.css" />
+	<link href="/components-login-log.js" rel="prefetch"><link href="/components-login-login.js" rel="prefetch"><link href="/components-register-register.js" rel="prefetch"><link href="/pages-index-index.js" rel="prefetch"><link href="/pages-tabBar-chat-chat.js" rel="prefetch"><link href="/pages-tabBar-chat-chatGroup.js" rel="prefetch"><link href="/pages-tabBar-personalCenter-personalCenter.js" rel="prefetch"><link href="/pages-tabBar-topic-postMessage.46bb53aa824393ae04cc.hot-update.js" rel="prefetch"><link href="/pages-tabBar-topic-postMessage.js" rel="prefetch"><link href="/pages-tabBar-topic-topic.js" rel="prefetch"><link href="/vendors~components-login-log~components-login-login~components-register-register~pages-tabBar-chat-c~b0a15a7f.js" rel="prefetch"><link href="/index.js" rel="preload" as="script"></head>
+
+	<body>
+		<noscript>
+			<strong>Please enable JavaScript to continue.</strong>
+		</noscript>
+		<div id="app"></div>
+		<!-- built files will be auto injected -->
+	<script type="text/javascript" src="/index.js"></script></body>
+
+</html>

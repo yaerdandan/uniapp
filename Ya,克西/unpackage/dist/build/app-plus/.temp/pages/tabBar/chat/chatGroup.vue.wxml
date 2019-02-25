@@ -1,0 +1,34 @@
+<template name="2ecffe0e">
+  <view class="_view data-v-60b62d24 box">
+    <scroll-view scroll-x class="_scroll-view data-v-60b62d24 owner" scroll-with-animation="{{true}}">
+      <view class="_view data-v-60b62d24 ownerInfo" wx:key="index" key="{{index}}" wx:for="{{owner}}" wx:for-index="index" wx:for-item="todo">
+        <image src="{{todo.ownerImg}}" class="_image data-v-60b62d24 ownerImg"></image>
+        <text class="_text data-v-60b62d24 ownerText">{{todo.name}}</text>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" class="_scroll-view data-v-60b62d24 {{isHeight == false ? 'height' : 'Height'}}">
+      <view id="ul" class="_div data-v-60b62d24">
+        <view wx:key="index" key="{{index}}" wx:for="{{todos}}" wx:for-index="index" wx:for-item="todo" class="_div data-v-60b62d24">
+          <view class="_div data-v-60b62d24 {{todo.ismine == true ? 'mine' : 'other'}}">
+            <image src="{{todo.ismine == true ? todo.src : todo.srcc}}" class="_image data-v-60b62d24 userImg"></image>
+            <view class="_div data-v-60b62d24 Meg">
+              <label class="_span data-v-60b62d24 Message">
+                <label hidden="{{!(todo.chatImg == '' ? !isShow : isShow)}}" class="_span data-v-60b62d24">{{todo.content}}</label>
+                <image hidden="{{!(todo.chatImg != '' ? !isShow : isShow)}}" src="{{todo.chatImg}}" class="_img data-v-60b62d24 chatImg" bindtap="handleProxy" data-eventid="{{'ypK-0-'+index}}" data-comkey="{{$k}}"></image>
+              </label>
+            </view>
+          </view>
+        </view>
+        <view class="_div data-v-60b62d24 clear"></view>
+      </view>
+    </scroll-view>
+    <view class="_view data-v-60b62d24 content">
+      <text class="_text data-v-60b62d24 text">回复:</text>
+      <textarea value="{{text}}" bindinput="handleProxy" bindkeyup="handleProxy" data-eventid="{{'lTq-1'}}" data-comkey="{{$k}}" class="_textarea data-v-60b62d24" />
+      <image src="{{photo}}" class="_image data-v-60b62d24 photo" bindtap="handleProxy" data-eventid="{{'bSE-2'}}" data-comkey="{{$k}}"></image>
+      <button bindtap="handleProxy" id="click" data-eventid="{{'lo4-3'}}" data-comkey="{{$k}}" class="_button data-v-60b62d24">
+        <image src="{{btnImg}}" class="_image data-v-60b62d24 btnImg"></image>
+      </button>
+    </view>
+  </view>
+</template>

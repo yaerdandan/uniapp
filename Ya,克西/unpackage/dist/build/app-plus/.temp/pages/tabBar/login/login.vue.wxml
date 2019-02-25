@@ -1,0 +1,25 @@
+<template name="44732b3b">
+  <view class="_view data-v-570dcd5f box">
+    <view class="_view data-v-570dcd5f bg_img">
+      <image src="{{src}}" class="_image data-v-570dcd5f bgSrc" mode="scaleToFill"></image>
+    </view>
+    <view class="_view data-v-570dcd5f user">
+      <view class="_view data-v-570dcd5f userInfo">
+        <image src="{{src}}" class="_image data-v-570dcd5f userImg" bindtap="handleProxy" data-eventid="{{'Zhx-0'}}" data-comkey="{{$k}}"></image>
+        <label class="_span data-v-570dcd5f username">{{username}}</label>
+        <view class="_br data-v-570dcd5f"></view>
+        <text class="_text data-v-570dcd5f sig">这是一个个性签名</text>
+      </view>
+    </view>
+    <view class="_view data-v-570dcd5f function">
+      <view wx:key="index" key="{{index}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="todo" class="_li data-v-570dcd5f">
+        <image class="_image data-v-570dcd5f iconImg" src="{{todo.iconImg}}"></image>
+        <label class="_span data-v-570dcd5f">{{todo.text}}</label>
+        <image class="_image data-v-570dcd5f arrows" src="{{arrows}}"></image>
+      </view>
+      <view class="_view data-v-570dcd5f">
+        <button type="warn" class="_button data-v-570dcd5f btn" bindtap="handleProxy" data-eventid="{{'bjK-1'}}" data-comkey="{{$k}}">退出登录</button>
+      </view>
+    </view>
+  </view>
+</template>

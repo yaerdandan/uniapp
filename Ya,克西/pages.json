@@ -1,0 +1,168 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"app-plus": {
+					// "titleNView": false //禁用原生导航栏
+				}
+			}
+		}, {
+			"path": "pages/tabBar/personalCenter/personalCenter",
+			"style": {
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/chat/chat",
+			"style": {
+				"navigationBarTitleText": "聊天",
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏
+				}
+			}
+		},
+		{
+			"path": "components/register/register",
+			"style": {
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏
+				}
+			}
+		},
+		{
+			"path": "components/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/tabBar/chat/chatGroup",
+			"style": {
+				"navigationBarTitleText": "聊天分组",
+				"navigationBarBackgroundColor": "#FFD700",
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏
+				}
+			}
+		},
+		{
+			"path": "components/login/log",
+			"style": {
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/topic/topic",
+			"style": {
+				"enablePullDownRefresh":true,
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/topic/postMessage",
+			"style": {
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/topic/detailTopic",
+			"style": {
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏
+				}
+			}
+		},
+		{
+			"path": "components/register/forgetPwd",
+			"style": {
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/personalCenter/setUser",
+			"style": {
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏
+				}
+			}
+		},
+		{
+			"path": "pages/index/jianzhi",
+			"style": {
+				"navigationBarTitleText": "兼职"
+			}
+		},
+		{
+			"path": "pages/index/meishi",
+			"style": {
+				"navigationBarTitleText": "美食"
+			}
+		},
+		{
+			"path": "pages/tabBar/personalCenter/Mytopic",
+			"style": {
+				"navigationBarTitleText": "我的帖子"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "Hello uniapp",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "white",
+		"mp-alipay": {
+			"titleBarColor": "#FFFFFF"
+		}
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "rgb(20,158,255)",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/Home.png",
+				"selectedIconPath": "static/Home1.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/tabBar/topic/topic",
+				"iconPath": "static/dongtai.png",
+				"selectedIconPath": "static/dongtai1.png",
+				"text": "动态"
+			},
+			{
+				"pagePath": "pages/tabBar/chat/chat",
+				"iconPath": "static/information.png",
+				"selectedIconPath": "static/information1.png",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/tabBar/personalCenter/personalCenter",
+				"iconPath": "static/My.png",
+				"selectedIconPath": "static/My1.png",
+				"text": "我的"
+			}
+		]
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	}
+}

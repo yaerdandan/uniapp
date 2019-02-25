@@ -1,0 +1,26 @@
+<template name="2490508a">
+  <view class="_view data-v-1c044c0c">
+    <view class="_view data-v-1c044c0c bg_img">
+      <image style="height:630px;width:100%;" src="{{img}}" mode class="_image data-v-1c044c0c"></image>
+    </view>
+    <view class="_view data-v-1c044c0c">
+      <image src="{{src}}" class="_img data-v-1c044c0c user_img" bindtap="handleProxy" data-eventid="{{'v1e-0'}}" data-comkey="{{$k}}"></image>
+    </view>
+    <view class="_view data-v-1c044c0c reg-info">
+      <input type="text" placeholder="用户名" value="{{username}}" bindinput="handleProxy" data-eventid="{{'zpz-1'}}" data-comkey="{{$k}}" class="_input data-v-1c044c0c" />
+      <input type="text" placeholder="手机号" value="{{number}}" bindinput="handleProxy" data-eventid="{{'Ja6-2'}}" data-comkey="{{$k}}" class="_input data-v-1c044c0c" />
+      <view class="_view data-v-1c044c0c">
+        <radio-group class="_radio-group data-v-1c044c0c radio-group" bindchange="handleProxy" data-eventid="{{'E20-3'}}" data-comkey="{{$k}}">
+          <label class="_label data-v-1c044c0c radio" wx:key="index" key="{{index}}" wx:for="{{items}}" wx:for-index="index" wx:for-item="item">
+            <radio value="{{item.name}}" checked="{{item.checked}}" class="_radio data-v-1c044c0c" />{{item.value}} </label>
+        </radio-group>
+      </view>
+      <input type="text" placeholder="验证码" value="{{verify}}" bindinput="handleProxy" data-eventid="{{'Tn4-4'}}" data-comkey="{{$k}}" class="_input data-v-1c044c0c" />
+      <button id="btn" class="_button data-v-1c044c0c verify" bindtap="handleProxy" disabled="{{disabled}}" data-eventid="{{'ntm-5'}}" data-comkey="{{$k}}">{{yzm}}</button>
+      <view class="_view data-v-1c044c0c btn_login">
+        <image style="height:45px;width:60%;margin:0 auto;display: block;" src="{{button_img}}" class="_image data-v-1c044c0c"></image>
+        <label class="_span data-v-1c044c0c user_login" bindtap="handleProxy" data-eventid="{{'6Du-6'}}" data-comkey="{{$k}}">注册</label>
+      </view>
+    </view>
+  </view>
+</template>

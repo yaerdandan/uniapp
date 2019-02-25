@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>角色页</title>
+    <link rel="stylesheet"  href="../static/puls/layui/css/layui.css">
+    <script type="text/javascript" src="../static/puls/layui/css/layui.css"></script>
+    <style>
+        .header{
+            background-color: #009688;
+            color: #FFFFFF;
+            display: inline-block;
+            padding: 10px;
+            margin-left: 20px;
+        }
+        .bor{
+            border-bottom: 2px solid #009688;
+            width: 100%;
+        }
+    </style>
+</head>
+<body style="padding: 10px">
+<div class="header">
+    <span >角色列表</span>
+</div>
+    <button class="layui-btn layui-btn=xs" style="float: right;margin-right: 20px;margin-top: 4px " onclick="add(0)"> 添加 </button>
+    <div class="bor"></div>
+<div class="menus">
+  <table class="layui-table">
+      <thead>
+      <tr>
+          <th>ID</th>
+          <th>名称</th>
+          <th>操作</th>
+      </tr>
+      </thead>
+      <tbody>
+        {volist name="$data.list" id="vo"}
+        <tr>
+            <td>{$vo.gid}</td>
+            <td>{$vo.title}</td>
+            <td><button class="layui-btn layui-btn-warm layui-btn-xs" onclick="add({$vo.gid})">修改</button>
+                <button class="layui-btn layui-btn-danger layui-btn-xs" onclick="del({$vo.gid})">删除</button>
+            </td>
+        </tr>
+        {/volist}
+      </tbody>
+  </table>
+</div>
+<script type="text/javascript">
+    layui.use(['layer'],function () {
+        layer=layui.layer;
+        $=layui.jquery;
+    });
+    function add(id) {
+        layer.open({
+            type: 2,
+            area: ['500px', '400px'], //宽高
+            shade: 0.3,
+            content: '/admins/Role/add?id=' + id
+        });
+    }
+    //    删除数据
+    function del(id) {
+        layer.confirm('确定要删除？', {
+            btn: ['确认','再想想'] //按钮
+        }, function(){
+            $.post('/index.php/admins/Role/delete',{"id":id},function (res) {
+                if (res.con>0){
+                    layer.alert(res.msg,{icon:2});
+                } else {
+                    layer.msg(res.msg);
+                    setTimeout(function () {
+                        window.location.reload();
+                    },1000)
+                }
+            },'json' )
+        }, function(){
+            layer.msg('我就知道我们是真爱', {
+                time: 1000, //20s后自动关闭
+            });
+        });
+    }
+</script>
+</body>
+</html>

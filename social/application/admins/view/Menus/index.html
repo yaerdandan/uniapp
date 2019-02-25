@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜单首页</title>
+    <link rel="stylesheet"  href="../../static/puls/layui/css/layui.css">
+    <script type="text/javascript" src="../../static/puls/layui/layui.js"></script>
+    <style>
+        .head{
+            background-color: #009688;height: 50px;line-height: 50px;color: #FFFFFF;font-size: 18px;padding-left: 20px;width: 100%;
+        }
+        .layui-collapse{
+            width: 180px;
+            border: none;
+        }
+        .layui-colla-content{
+            padding: 0;
+            border-top:none ;
+        }
+        .layui-colla-title{
+            background-color: #42485b;
+            border-top: none;
+            color: #FFFFFF;
+        }
+        .layui-nav{
+            border: none;
+            width: 180px;
+        }
+        .layui-colla-item{
+            border: none;
+        }
+        .menu{
+            background-color: #42485b;
+            position: absolute;
+        }
+        .main{
+            position: absolute;
+            left: 180px;
+            right: 0px;
+        }
+        .right{
+            float:right;
+            margin-right: 40px;
+        }
+    </style>
+</head>
+<body>
+<!--头部-->
+<div class="head">
+    <span>后台管理系统</span>
+    <div class="right">
+        <span >admins【后台管理员】</span>
+        <a href="javascript:;" onclick="outlogin()">退出登录</a>
+    </div>
+</div>
+<!--导航栏-->
+<div class="menu" id="menu">
+    <div class="layui-collapse" lay-accordion>
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title" >管理员管理</h2>
+            <div class="layui-colla-content layui-show">
+                <ul class="layui-nav layui-nav-tree" lay-filter="test" >
+                    <li class="layui-nav-item"><a href="javascript:;" onclick="dj(this)" src="http://10.2.48.63/social/public/admins/Party/index">管理员列表</a></li>
+                </ul>
+                </div>
+        </div>
+            <div class="layui-colla-item">
+                <h2 class="layui-colla-title" >权限管理</h2>
+                <div class="layui-colla-content layui-show">
+                    <ul class="layui-nav layui-nav-tree" lay-filter="test" >
+                        <li class="layui-nav-item"><a href="javascript:;" onclick="dj(this)" src="http://10.2.48.63/social/public/admins/Role/index" >角色管理</a></li>
+                        <li class="layui-nav-item"><a href="javascript:;" onclick="dj(this)" src="http://10.2.48.63/social/public/admins/Menu/index"> 菜单管理</a></li>
+                    </ul>
+                </div>
+        </div>
+</div>
+</div>
+<!--主页面-->
+<div class="main">
+        <iframe src="http://10.2.48.63/social/public/admins/Menus/welcome" onload="seetMainHiegh(this)"  frameborder="0" style="width: 100%;height: 100%" scrolling=""></iframe>
+</div>
+<script>
+    layui.use(['element','layer'],function () {
+        var element = layui.element;
+        layer=layui.layer;
+        $=layui.jquery;
+
+        resetMenuHeight();
+    });
+    //    重新设置栏目
+    function resetMenuHeight() {
+        var height=document.documentElement.clientHeight-50;
+        $('#menu').height(height);
+    }
+    //    设置iframe
+    function dj(obj) {
+        var src=$(obj).attr('src');
+        $('iframe').attr('src',src);
+    }
+    // 重新设置主菜单大小
+    function seetMainHiegh(obj) {
+        var height=parent.document.documentElement.clientHeight-50;
+        $(obj).parent('div').height(height);
+    }
+//    退出登录
+    function outlogin() {
+        layer.confirm('您确定要退出吗？', {
+            btn: ['确定','再看看'] //按钮
+        }, function(){
+               $.post('/admins/Acction/outlogin',function (res) {
+                   if(res.con>0){
+                       layer.alert('呀！出错了',{icon:2});
+                   }else {
+                       layer.msg(res.msg);
+                       setTimeout(function () {
+                           window.location.href='admins/acction/index'
+                       },1000)
+                   }
+               },'json')
+        }, function(){
+            layer.msg('好的', {icon:1});
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<template name="91b9a672">
+  <view class="_view data-v-3c93a21d">
+    <view class="_view data-v-3c93a21d topic">
+      <view class="_view data-v-3c93a21d topicContent" wx:key="index" key="{{index}}" wx:for="{{topicLists}}" wx:for-index="index" wx:for-item="todo">
+        <view class="_view data-v-3c93a21d topicUser">
+          <image src="{{todo.user['0']['0'].portrait}}" class="_image data-v-3c93a21d topicUserImg"></image>
+          <text class="_text data-v-3c93a21d topicUsername">{{todo.user['0']['0'].user}}</text>
+          <text class="_text data-v-3c93a21d Time">{{todo.add_time}}</text>
+          <image src="{{topicTimeImg}}" class="_image data-v-3c93a21d topicTimeImg"></image>
+        </view>
+        <view class="_view data-v-3c93a21d topicTextbox">
+          <text class="_text data-v-3c93a21d topicTitle1">{{todo.title}}</text>
+          <text class="_text data-v-3c93a21d topicTextContent">{{todo.content}}</text>
+          <view class="_view data-v-3c93a21d topicContentImgBox">
+            <view class="_view data-v-3c93a21d topicContentImg" wx:key="index1" key="{{index1}}" wx:for="{{todo.src['0']}}" wx:for-index="index1" wx:for-item="todoImg">
+              <image src="{{todoImg}}" class="_image data-v-3c93a21d topicContentImg_1" bindtap="handleProxy" data-eventid="{{'V2r-0-'+index+'-'+index1}}" data-comkey="{{$k}}"></image>
+            </view>
+          </view>
+          <view class="_view data-v-3c93a21d result">
+            <view class="_view data-v-3c93a21d resultStar">
+              <image src="{{todo.conll == 1 ? resultStarImg1 : resultStarImg}}" class="_image data-v-3c93a21d resultStarImg" bindtap="handleProxy" data-eventid="{{'AeC-1-'+index}}" data-comkey="{{$k}}"></image>
+              <text class="_text data-v-3c93a21d resultStarText {{[(todo.conll == 1 ? true : false) ? 'resultStarText1' : '']}}">{{todo.con_count}}</text>
+            </view>
+            <view class="_view data-v-3c93a21d resultStar">
+              <image src="{{resultCommentImg}}" class="_image data-v-3c93a21d resultStarImg"></image>
+              <text class="_text data-v-3c93a21d resultStarComment">{{todo.resultStarComment}}</text>
+            </view>
+            <view class="_view data-v-3c93a21d resultStar_1">
+              <image src="{{todo.praise_up == 1 ? resultTrampleImg1: resultTrampleImg}}" class="_image data-v-3c93a21d resultTrampleImg" bindtap="handleProxy" data-eventid="{{'7m9-2-'+index}}" data-comkey="{{$k}}"></image>
+              <text class="_text data-v-3c93a21d resultTrampText {{[(todo.praise_up == 1 ? true : false) ? 'resultTrampText1' : '']}}">{{todo.count}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

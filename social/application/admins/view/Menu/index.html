@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"  href="../static/puls/layui/layui.js">
+    <script type="text/javascript" src="../static/puls/layui/layui.js"></script>
+    <style>
+        .bor{
+            border-bottom: 2px solid #009688;
+            margin-top: 8px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body style="padding: 10px;">
+<div class="head">
+    <span style="background-color: #009688;padding:10px;color: #FFFFFF;margin-left: 20px">菜单列表</span>
+</div>
+{if $pid>0}
+<button class="layui-btn layui-btn-sm" style="float: right;margin-top: -20px" onclick="up({$id})"> 上一级</button>
+{/if}
+<div class="bor"></div>
+<form class="layui-form">
+    <input type="hidden" value="{$pid}" name="id">
+<table class="layui-table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>名称</th>
+        <th>控制器</th>
+        <th>方法</th>
+        <th>状态</th>
+        <th>是否显示</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+     {volist name="$data.list" id="vo"}
+     <tr>
+         <td>{$vo.id}</td>
+        <td><input type="text" class="layui-input" value="{$vo.title}" name="title[{$vo.id}]"></td>
+        <td><input type="text" class="layui-input" value="{$vo.controller}" name="controller[{$vo.id}]"></td>
+        <td><input type="text" class="layui-input" value="{$vo.method}" name="method[{$vo.id}]"></td>
+        <td><input type="checkbox" value="1" {if $vo.zt==1}checked{/if} title="禁用" name="zt[{$vo.id}]"  ></td>
+        <td><input type="checkbox" value="1" {if $vo.del==1}checked{/if} title="隐藏" name="del[{$vo.id}]"  ></td>
+         <td>
+         <button class="layui-btn layui-btn-sm" onclick="sele({$vo.id});return false;">子菜单</button>
+         </td>
+     </tr>
+     {/volist}
+     <tr>
+         <td></td>
+         <td><input type="text" class="layui-input" name="title[0]"></td>
+         <td><input type="text" class="layui-input" name="controller[0]"></td>
+         <td><input type="text" class="layui-input" name="method[0]"></td>
+         <td><input type="checkbox" value="1"  title="禁用"  name="zt[0]"  ></td>
+         <td><input type="checkbox" value="1"  title="隐藏"   name="del[0]"></td>
+         <td>
+             <button class="layui-btn layui-btn-sm" onclick="save();return false;">保存</button>
+         </td>
+     </tr>
+    </tbody>
+</table>
+</form>
+<script type="text/javascript">
+    layui.use(['layer','form'],function () {
+        layer=layui.layer;
+        $=layui.jquery;
+        form=layer.form;
+    });
+//    查询子级菜单
+    function sele(id) {
+    window.location.href="/index.php/admins/Menu/index?id="+id;
+    }
+//    返回上级菜单
+    function up(id) {
+        window.location.href="/index.php/admins/Menu/index?id="+id;
+    }
+//    保存修改删除
+    function save() {
+        $.post('/index.php/admins/Menu/save',$('form').serialize(),function (res) {
+            if(res.con>0){
+                layer.msg('操作出错',{"icon":2,"amin":2});
+            }else {
+                layer.msg(res.msg);
+                setTimeout(function () {
+                    window.location.reload();
+                },1000)
+            }
+        },'json')
+    }
+</script>
+</body>
+</html>

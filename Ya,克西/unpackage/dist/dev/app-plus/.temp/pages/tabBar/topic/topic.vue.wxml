@@ -1,0 +1,59 @@
+<template name="e492d772">
+  <view class="_view data-v-bf5d932a index">
+    <view class="_view data-v-bf5d932a status_bar">
+      <view class="_view data-v-bf5d932a top_view"></view>
+    </view>
+    <view class="_view data-v-bf5d932a">
+      <image src="{{topicImg}}" class="_image data-v-bf5d932a topicImg"></image>
+    </view>
+    <view class="_view data-v-bf5d932a function">
+      <view class="_view data-v-bf5d932a function1">
+        <image src="../../../static/campusActivity.png" mode class="_image data-v-bf5d932a campusActivity"></image>
+        <text class="_text data-v-bf5d932a">校内活动</text>
+      </view>
+      <view class="_view data-v-bf5d932a function2">
+        <image src="../../../static/AlumniCircle.png" mode class="_image data-v-bf5d932a AlumniCircle"></image>
+        <text class="_text data-v-bf5d932a">校友圈</text>
+      </view>
+    </view>
+    <view class="_view data-v-bf5d932a topic">
+      <view class="_view data-v-bf5d932a topicTitle">
+        <text class="_text data-v-bf5d932a topicText">·热门推荐·</text>
+      </view>
+      <view class="_view data-v-bf5d932a topicContent" wx:key="index" key="{{index}}" wx:for="{{topicList}}" wx:for-index="index" wx:for-item="todo">
+        <view class="_view data-v-bf5d932a topicUser" bindtap="handleProxy" data-eventid="{{'hb5-0-'+index}}" data-comkey="{{$k}}">
+          <image src="{{todo.UserImg}}" class="_image data-v-bf5d932a topicUserImg"></image>
+          <text class="_text data-v-bf5d932a topicUsername">{{todo.PostTopicUser}}</text>
+          <image src="{{topicTimeImg}}" class="_image data-v-bf5d932a topicTimeImg"></image>
+          <text class="_text data-v-bf5d932a topicTime">{{todo.Time}}</text>
+        </view>
+        <view class="_view data-v-bf5d932a topicTextbox">
+          <text class="_text data-v-bf5d932a">{{todo.title}}</text>
+          <text class="_text data-v-bf5d932a topicTextContent">{{todo.content}}</text>
+          <view class="_view data-v-bf5d932a topicContentImgBox">
+            <view class="_view data-v-bf5d932a topicContentImg" wx:key="index1" key="{{index1}}" wx:for="{{todo.src}}" wx:for-index="index1" wx:for-item="todoImg">
+              <image src="{{todoImg}}" class="_image data-v-bf5d932a topicContentImg_1"></image>
+            </view>
+          </view>
+          <view class="_view data-v-bf5d932a result">
+            <view class="_view data-v-bf5d932a resultStar">
+              <image src="{{todo.conll == 1 ? resultStarImg1 : resultStarImg}}" class="_image data-v-bf5d932a resultStarImg" bindtap="handleProxy" data-eventid="{{'BiO-1-'+index}}" data-comkey="{{$k}}"></image>
+              <text class="_text data-v-bf5d932a resultStarText {{[(todo.conn == 1 ? true : false) ? 'resultStarText1' : '']}}">{{todo.con_count}}</text>
+            </view>
+            <view class="_view data-v-bf5d932a resultStar">
+              <image src="{{resultCommentImg}}" class="_image data-v-bf5d932a resultStarImg"></image>
+              <text class="_text data-v-bf5d932a resultStarComment">{{todo.resultStarComment}}</text>
+            </view>
+            <view class="_view data-v-bf5d932a resultStar_1">
+              <image src="{{todo.praise_up == 1 ? resultTrampleImg1: resultTrampleImg}}" class="_image data-v-bf5d932a resultTrampleImg" bindtap="handleProxy" data-eventid="{{'ska-2-'+index}}" data-comkey="{{$k}}"></image>
+              <text class="_text data-v-bf5d932a resultTrampText {{[(todo.top == 1 ? true : false) ? 'resultTrampText1' : '']}}">{{todo.count}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-bf5d932a">
+      <image src="{{pushTopic}}" bindtap="handleProxy" class="_image data-v-bf5d932a postMessage {{isHeight == false ? 'height' : 'Height'}}" hidden="{{!(isShow)}}" data-eventid="{{'Zoo-3'}}" data-comkey="{{$k}}">发帖</image>
+    </view>
+  </view>
+</template>

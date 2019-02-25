@@ -1,0 +1,12 @@
+<template name="222563a1">
+  <view class="_view data-v-25d0c26a">
+    <view class="_view data-v-25d0c26a search">
+      <view class="_div data-v-25d0c26a bar1">
+        <input type="text" placeholder="搜索的内容..." class="_input data-v-25d0c26a" />
+        <button type="submit" class="_button data-v-25d0c26a btn"></button>
+      </view>
+    </view>
+    <button bindtap="handleProxy" data-eventid="{{'qTp-0'}}" data-comkey="{{$k}}" class="_button data-v-25d0c26a">群聊1</button>
+    <button bindtap="handleProxy" data-eventid="{{'wlt-1'}}" data-comkey="{{$k}}" class="_button data-v-25d0c26a">群聊2</button>
+    <button bindtap="handleProxy" data-eventid="{{'bmf-2'}}" data-comkey="{{$k}}" class="_button data-v-25d0c26a">私聊1</button> {{$store.state.username}} {{name}} </view>
+</template>

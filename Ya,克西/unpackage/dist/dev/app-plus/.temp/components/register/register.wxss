@@ -1,0 +1,97 @@
+
+.status_bar {
+  height: var(--status-bar-height);
+  width: 100%;
+}
+.top_view {
+  height: var(--status-bar-height);
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.srcImg {
+  width: 100%;
+  height: 400rpx;
+}
+.fhImg {
+  width: 30rpx;
+  height: 60rpx;
+  position: fixed;
+  top: 80rpx;
+  left: 30rpx;
+}
+.fhImg {
+  width: 30rpx;
+  height: 60rpx;
+  position: fixed;
+  left: 30rpx;
+}
+.regText {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  line-height: 60rpx;
+}
+.phone {
+  width: 80%;
+  height: 80rpx;
+  margin: 0 auto;
+  margin-top: 40rpx;
+  border-bottom: 2px solid lightgray;
+}
+.phoneText {
+  position: fixed;
+  left: 180rpx;
+  top: 190rpx;
+  width: 400rpx;
+  display: inline-block;
+}
+.btn {
+  width: 220rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: fixed;
+  top: 300rpx;
+  left: 450rpx;
+  font-size: 25rpx;
+  disabled: true;
+}
+.nicknameBox {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 80rpx;
+  border-bottom: 2px solid lightgray;
+}
+.nickname {
+  margin-top: 40rpx;
+  margin-bottom: 10rpx;
+}
+.password {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 80rpx;
+  border-bottom: 2px solid lightgray;
+}
+.pwd {
+  margin-top: 40rpx;
+  padding-bottom: 20rpx;
+}
+.conPwd {
+  position: fixed;
+  top: 920rpx;
+  width: 80%;
+  padding-bottom: 20rpx;
+  border-bottom: 2px solid lightgray;
+}
+.btnReg {
+  width: 70%;
+  position: fixed;
+  top: 1050rpx;
+  left: 120rpx;
+  border-radius: 30rpx;
+}
+.btnReg1 {
+  background: #149EFF;
+  color: #ffffff;
+}

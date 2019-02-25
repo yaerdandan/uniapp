@@ -1,0 +1,43 @@
+<template name="2ecffe0e">
+  <view class="_view data-v-60b62d24 box">
+    <view class="_view data-v-60b62d24 status_bar">
+      <view class="_view data-v-60b62d24 top_view"></view>
+    </view>
+    <view class="_view data-v-60b62d24 Top">
+      <image src="{{fanhuiImg}}" class="_image data-v-60b62d24 fanhuiImg" bindtap="handleProxy" data-eventid="{{'VmC-0'}}" data-comkey="{{$k}}"></image>
+      <text class="_text data-v-60b62d24 TitleText">{{groupName}}</text>
+      <text class="_text data-v-60b62d24 add" bindtap="handleProxy" hidden="{{!(isAdd)}}" data-eventid="{{'8JP-1'}}" data-comkey="{{$k}}">添加</text>
+      <text class="_text data-v-60b62d24 add1" bindtap="handleProxy" hidden="{{!(!isAdd)}}" data-eventid="{{'D7C-2'}}" data-comkey="{{$k}}">取消</text>
+    </view>
+    <scroll-view scroll-x class="_scroll-view data-v-60b62d24 owner" scroll-with-animation="{{true}}">
+      <view class="_view data-v-60b62d24 ownerInfo" wx:key="index" key="{{index}}" wx:for="{{owner}}" wx:for-index="index" wx:for-item="todo">
+        <image src="{{todo.ownerImg}}" class="_image data-v-60b62d24 ownerImg"></image>
+        <text class="_text data-v-60b62d24 ownerText">{{todo.name}}</text>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" class="_scroll-view data-v-60b62d24 {{isHeight == false ? 'height' : 'Height'}}">
+      <view id="ul" class="_div data-v-60b62d24">
+        <view wx:key="index" key="{{index}}" wx:for="{{todos}}" wx:for-index="index" wx:for-item="todo" class="_div data-v-60b62d24">
+          <view class="_div data-v-60b62d24 {{todo.ismine == true ? 'mine' : 'other'}}">
+            <image src="{{todo.ismine == true ? todo.src : todo.srcc}}" class="_image data-v-60b62d24 userImg"></image>
+            <view class="_div data-v-60b62d24 Meg">
+              <label class="_span data-v-60b62d24 Message">
+                <label hidden="{{!(todo.chatImg == '' ? !isShow : isShow)}}" class="_span data-v-60b62d24">{{todo.content}}</label>
+                <image hidden="{{!(todo.chatImg != '' ? !isShow : isShow)}}" src="{{todo.chatImg}}" class="_img data-v-60b62d24 chatImg" bindtap="handleProxy" data-eventid="{{'Vtp-3-'+index}}" data-comkey="{{$k}}"></image>
+              </label>
+            </view>
+          </view>
+        </view>
+        <view class="_div data-v-60b62d24 clear"></view>
+      </view>
+    </scroll-view>
+    <view class="_view data-v-60b62d24 content">
+      <text class="_text data-v-60b62d24 text">回复:</text>
+      <textarea value="{{text}}" bindinput="handleProxy" bindkeyup="handleProxy" data-eventid="{{'48Q-4'}}" data-comkey="{{$k}}" class="_textarea data-v-60b62d24" />
+      <image src="{{photo}}" class="_image data-v-60b62d24 photo" bindtap="handleProxy" data-eventid="{{'zlU-5'}}" data-comkey="{{$k}}"></image>
+      <button bindtap="handleProxy" id="click" data-eventid="{{'953-6'}}" data-comkey="{{$k}}" class="_button data-v-60b62d24">
+        <image src="{{btnImg}}" class="_image data-v-60b62d24 btnImg"></image>
+      </button>
+    </view>
+  </view>
+</template>

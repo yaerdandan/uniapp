@@ -1,0 +1,45 @@
+<template name="e077701c">
+  <view class="_view data-v-dffd4996">
+    <view class="_view data-v-dffd4996 img-cont">
+      <image style="width:100%;" src="../../static/1.png" mode="widthFix" class="_image data-v-dffd4996"></image>
+    </view>
+    <view class="_view data-v-dffd4996 cont-1">
+      <image style="width:60rpx;" src="../../static/jianzhi1.png" mode="widthFix" class="_image data-v-dffd4996"></image>
+      <text style="margin-left:30rpx;" class="_text data-v-dffd4996">90/天</text>
+      <text style="position:absolute;bottom:5rpx;right:50rpx;font-size:24rpx;color:#868586;" class="_text data-v-dffd4996">浏览量：4396</text>
+    </view>
+    <view class="_view data-v-dffd4996 cont-2">
+      <view style="display: flex;justify-content: space-around;" class="_view data-v-dffd4996">
+        <view style="display: flex;justify-content: space-around;align-items: center;" class="_view data-v-dffd4996">
+          <image style="width:40rpx;position:relative;top:5rpx;margin-right:15rpx;" src="../../static/jianzhi2.png" mode="widthFix" class="_image data-v-dffd4996"></image>
+          <text class="_text data-v-dffd4996">校内兼职</text>
+        </view>
+        <view style="display: flex;justify-content: space-around;align-items: center;" class="_view data-v-dffd4996">
+          <image style="width:40rpx;position:relative;top:5rpx;left:-45rpx;margin-right:0rpx;" src="../../static/jianzhi4.png" mode="widthFix" class="_image data-v-dffd4996"></image>
+          <text style="position:relative;left:-30rpx;" class="_text data-v-dffd4996">男女不限</text>
+        </view>
+      </view>
+      <view style="display: flex;justify-content: space-around;margin-top:15rpx;" class="_view data-v-dffd4996">
+        <view style="display: flex;justify-content: space-around;align-items: center;" class="_view data-v-dffd4996">
+          <image style="width:40rpx;position:relative;top:5rpx;left:10rpx;margin-right:23rpx;" src="../../static/jianzhi3.png" mode="widthFix" class="_image data-v-dffd4996"></image>
+          <text class="_text data-v-dffd4996">食堂三楼</text>
+        </view>
+        <view style="display: flex;justify-content: space-around;align-items: center;" class="_view data-v-dffd4996">
+          <image style="width:40rpx;position:relative;top:5rpx;margin-right:15rpx;" src="../../static/jianzhi5.png" mode="widthFix" class="_image data-v-dffd4996"></image>
+          <text class="_text data-v-dffd4996">2019-01-02</text>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-dffd4996 cont-3">
+      <view style="font-size:32rpx;color:#6E6D6D;margin-top:10rpx;" class="_view data-v-dffd4996">工作内容：</view>
+      <view style="font-size:32rpx;color:#6E6D6D;margin-top:10rpx;" class="_view data-v-dffd4996">1. 帮后厨打下手</view>
+      <view style="font-size:32rpx;color:#6E6D6D;margin-top:10rpx;" class="_view data-v-dffd4996">2. 外卖配送</view>
+      <view style="font-size:32rpx;color:#6E6D6D;margin-top:10rpx;" class="_view data-v-dffd4996">3. 厨房清洁</view>
+    </view>
+    <view class="_view data-v-dffd4996 cont-4">
+      <text style="color:#2BBAFC;" class="_text data-v-dffd4996">联系商家：</text>
+      <text class="_text data-v-dffd4996"> 报名之后可联系商家</text>
+    </view>
+    <view style="margin:0 auto;text-align: center;margin-top:50rpx;width:90%;height:80rpx;border-radius: 18rpx;background-color: #2BBAFC;color:#fff;line-height: 80rpx;" class="_view data-v-dffd4996"> 报名 </view>
+  </view>
+</template>

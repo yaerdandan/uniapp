@@ -1,0 +1,209 @@
+
+.status_bar {
+  height: var(--status-bar-height);
+  width: 100%;
+}
+.top_view {
+  height: var(--status-bar-height);
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.topicImg {
+  width: 100%;
+  height: 350rpx;
+}
+.function {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  height: 200rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.campusActivity {
+  margin-top: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+}
+.AlumniCircle {
+  margin-top: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+}
+.topic {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  width: 95%;
+}
+.topicTitle {
+  margin: 0 auto;
+  width: 150rpx;
+  height: 50rpx;
+  border: 1px solid #47BBC8;
+  border-radius: 30rpx;
+  padding: 5rpx;
+}
+.topicText {
+  position: relative;
+  top: -8rpx;
+  left: 2rpx;
+  text-align: center;
+  background: #47BBC8;
+  padding: 5rpx;
+  font-size: 28rpx;
+  color: white;
+  border-radius: 30rpx;
+}
+.topicContent {
+  width: 100%;
+  border: 1px solid gray;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+.topicUser {
+  margin: 0 auto;
+  margin-top: 20rpx;
+  width: 95%;
+  height: 100rpx;
+  position: relative;
+}
+.topicUserImg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.topicUsername {
+  position: relative;
+  top: -30rpx;
+  left: 20rpx;
+  font-size: 37rpx;
+}
+.topicTimeImg {
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  top: 45rpx;
+  left: 470rpx;
+}
+.topicTime {
+  position: absolute;
+  left: 520rpx;
+  top: 40rpx;
+  font-size: 30rpx;
+}
+.topicTextbox {
+  margin: 0 auto;
+  width: 95%;
+  margin-top: 20rpx;
+}
+.topicTextContent {
+  font-size: 30rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.topicContentImgBox {
+  height: 300rpx;
+  overflow: hidden;
+}
+.topicContentImg {
+  display: inline-block;
+}
+.topicContentImg_1 {
+  margin-top: 20rpx;
+  width: 200rpx;
+  height: 300rpx;
+  margin-left: 20rpx;
+}
+.result {
+  margin: 0 auto;
+  margin-top: 20rpx;
+  width: 95%;
+  height: 80rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.resultStar {
+  width: 230rpx;
+  height: 80rpx;
+}
+.resultStar_1 {
+  width: 230rpx;
+  height: 80rpx;
+  position: relative;
+}
+.resultStarImg {
+  margin-top: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.resultStarText,
+.resultStarComment {
+  position: relative;
+  left: 50rpx;
+  top: -15rpx;
+  font-size: 30rpx;
+  color: gray;
+}
+.resultStarText1 {
+  color: rgb(17,212,254);
+}
+.resultTrampText {
+  text-align: center;
+  display: block;
+  position: relative;
+  left: 20rpx;
+  margin-top: -55rpx;
+  font-size: 30rpx;
+  color: gray;
+}
+.resultTrampleImg,
+.resultTopImg {
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 10rpx;
+}
+.resultTopImg {
+  position: absolute;
+  top: 0px;
+  right: 0;
+}
+.postMessage {
+  width: 100rpx;
+  height: 100rpx;
+}
+.height {
+  position: fixed;
+  bottom: 120rpx;
+  right: 30rpx;
+}
+.Height {
+  position: fixed;
+  bottom: 120rpx;
+  right: 30rpx;
+}
+.function1 {
+  width: 200rpx;
+  height: 100px;
+}
+.function1>image {
+  position: relative;
+  left: 30rpx;
+}

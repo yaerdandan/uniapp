@@ -1,0 +1,150 @@
+#ul {
+	margin: 0 auto;
+	width: 90%;
+	word-wrap: break-word;
+	word-break: normal;
+	word-break: break-all;
+}
+
+.mine {
+	width: 80%;
+	line-height: 80upx;
+	color: white;
+	margin-top: 15upx;
+	float: right;
+	border: 1px solid;
+}
+
+.other {
+	width: 80%;
+	line-height: 80upx;
+	margin-top: 15upx;
+	color: white;
+	float: left;
+}
+
+span {
+	margin: 5upx 12upx 0 0;
+	border-radius: 15upx;
+	font-weight: 400;
+	font-size: 36upx;
+}
+
+.mine span {
+	float: right;
+}
+
+.mine span:after {
+	content: '';
+	position: absolute;
+	left: 100%;
+	top: 0px;
+	width: 16px;
+	height: 19px;
+	border-width: 0;
+	border-style: solid;
+	border-color: transparent;
+	margin-left: -6px;
+	border-bottom-width: 10px;
+	border-bottom-color: currentColor;
+	border-radius: 0 0 44px 0;
+	color: #f8ac09;
+}
+
+.other span {
+	float: left;
+}
+
+.other .Message:after {
+	content: '';
+	position: absolute;
+	right: 100%;
+	width: 16px;
+	height: 15px;
+	border-width: 0;
+	border-style: solid;
+	border-color: transparent;
+	margin-right: -6px;
+	border-top-width: 10px;
+	border-top-color: currentColor;
+	border-radius: 32px 0 0 0;
+	color: #9999ff;
+}
+
+.userImg {
+	width: 100upx;
+	height: 100upx;
+	border-radius: 50%;
+}
+
+.mine .userImg {
+	float: right;
+}
+
+.other .userImg {
+	float: left;
+}
+
+.Meg {
+	width: 80%;
+}
+
+.other .Meg {
+	float: right;
+}
+.mine .Message {
+	margin-right: 20upx;
+}
+.other .Message {
+	margin-left: 20upx;
+	background: #9999ff;
+}
+
+.Message {
+	margin-bottom: 30upx;
+	line-height: 60upx;
+	padding: 12upx 20upx;
+	position: relative;
+	background: #f8ac09;
+	border-radius: 5px;
+}
+.Message span{
+	margin:0;
+}
+.chatImg{
+	width:200upx;
+	height:200upx;
+}
+.mine .chatImg{
+	float: ;
+}
+.clear {
+	clear: both
+}
+/* 进入聊天室的人 */
+.owner{
+	height:180upx;
+	background: #FFD700;
+	white-space: nowrap;
+}
+.ownerInfo{
+	height: 100%;
+	width:200upx;
+	display: inline-block;
+}
+.ownerImg{
+	height:100upx;
+	width:100upx;
+	margin:0 auto;
+	display: block;
+	margin-top:20upx;
+	border-radius: 50%;
+	border:3px solid white;
+}
+.ownerText{
+	color:white;
+	text-align: center;
+	display: block;
+	font-size: 30upx;
+	font-weight: 600;
+}

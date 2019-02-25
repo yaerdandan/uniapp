@@ -1,0 +1,31 @@
+<template name="248e51f0">
+  <view class="_view data-v-24904a4d yumaoqiu-view">
+    <view class="_view data-v-24904a4d name-view">
+      <view class="_view data-v-24904a4d">姓名</view>
+      <input type="text" placeholder="请输入姓名" value="" class="_input data-v-24904a4d" />
+    </view>
+    <view class="_view data-v-24904a4d school-view">
+      <view class="_view data-v-24904a4d">学校</view>
+      <input type="text" placeholder="请输入学校信息" value="" class="_input data-v-24904a4d" />
+    </view>
+    <view class="_view data-v-24904a4d canyu-view">
+      <view class="_view data-v-24904a4d">参与形式</view>
+      <input type="text" placeholder="请填写个人或小组" value="" class="_input data-v-24904a4d" />
+    </view>
+    <view class="_view data-v-24904a4d duiwu-view">
+      <view class="_view data-v-24904a4d">队伍/作品名称</view>
+      <input type="text" placeholder="请输入参数队伍/作品名称" value="" class="_input data-v-24904a4d" />
+    </view>
+    <view class="_view data-v-24904a4d baoming-btn">报名</view>
+    <view style="position:absolute;bottom:30rpx;" class="_view data-v-24904a4d">
+      <view class="_view data-v-24904a4d bottom-s"></view>
+      <view class="_view data-v-24904a4d xia">
+        <view class="_view data-v-24904a4d qiupai">1)参赛人员须自行携带球拍，举办方提供球</view>
+        <view style="margin-left:70rpx;" class="_view data-v-24904a4d">2)比赛分单打和双打，请分配好队员</view>
+        <view style="margin-left:70rpx;" class="_view data-v-24904a4d">3)请务必注意安全.</view>
+        <view style="margin-left:70rpx;" class="_view data-v-24904a4d">4)预计在2019-01-12举行半决赛，决赛，具体</view>
+        <view style="margin-left:70rpx;" class="_view data-v-24904a4d"> 时间视情况而定，请各位参赛选手分配耗时间。</view>
+      </view>
+    </view>
+  </view>
+</template>

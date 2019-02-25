@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet"  href="../static/puls/layui/css/layui.css">
+    <script type="text/javascript" src="../static/puls/layui/layui.js"></script>
+</head>
+<body style="background-color:#1E9FFF; ">
+<div class="box" style="background-color: #FFFFFF;width: 500px;margin: 0 auto;left: 40%;top: 30%; position: absolute;text-align: center;border-radius: 10px;box-shadow: 4px 4px  #555555 " >
+    <h3 style="color: darkgrey;margin:10px;">后台管理系统</h3>
+    <div class="bor" style="border-bottom: 1px solid gray"></div>
+  <form style="padding: 10px" class="layui-form">
+      <div class="layui-form-item">
+          <label class="layui-form-label">名称</label>
+          <div class="layui-input-block">
+              <input type="text" class="layui-input" placeholder="请输入名称" name="user" id="user">
+          </div>
+      </div>
+      <div class="layui-form-item">
+          <label class="layui-form-label">密码</label>
+          <div class="layui-input-block">
+              <input type="password" class="layui-input" placeholder="请输入密码" name="paw" id="paw">
+          </div>
+      </div>
+      <div class="layui-form-item">
+          <label class="layui-form-label">验证码</label>
+          <div class="layui-input-inline">
+              <input type="text" class="layui-input" placeholder="请输入验证码" name="vicod" id="vicod">
+          </div>
+          <img src="{:captcha_src()}" alt="" id="img" onclick="dj()">
+      </div>
+  </form>
+    <div class="layui-form-item">
+        <button class="layui-btn " onclick="dologin()">登陆</button>
+    </div>
+</div>
+<script type="text/javascript">
+    layui.use(['layer'],function () {
+        layer=layui.layer;
+        $=layui.jquery;
+     //   自动聚焦
+     $('#user').focus();
+    // 回撤登录
+        $('input').keydown(function (e) {
+            if(e.keyCode==13){
+                dologin();
+            }
+        });
+
+    });
+    //    验证码重置
+    function dj() {
+        $('#img').attr('src',"{:captcha_src()}? time="+new Date());
+    }
+
+//    登录
+    function dologin() {
+        var user=$('#user').val();
+        var paw=$('#paw').val();
+        var vicod=$('#vicode');
+        if(user==''){
+            layer.msg('请输入用户名',{'icon':2,'amin':6});
+            return;
+        }
+        if (paw==''){
+            layer.msg('请输入密码',{'icon':2,'amin':6});
+            return;
+        }
+        if (vicod==''){
+            layer.msg(' 请输入验证码',{'icon':2,'amin':6});
+            return;
+        }
+        $.post('http://10.2.48.63/social/public/admins/Acction/dologin',$('form').serialize(),function (res) {
+            if(res.con>0){
+                dj();
+                layer.msg(res.msg,{'icon':2,'amin':2});
+            }else {
+                layer.msg(res.msg);
+                setTimeout(function () {
+                    window.location.href='http://10.2.48.63/social/public/admins/Menus/index';
+                },1000)
+            }
+        },'json')
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+.search{border:1px solid}._input{width:45%;height:35px;padding-left:10rpx;font-size:25rpx;position:fixed;left:20%}._input,.btn{display:inline-block}.btn{height:37px;width:37px}.bar1{background:#a3d0c3}.bar1 ._input{border:2px solid #7ba7ab;border-radius:5px;background:#f9f0da;color:#9e9c9c}.bar1 ._button{background:#7ba7ab;border-radius:0 5px 5px 0}
